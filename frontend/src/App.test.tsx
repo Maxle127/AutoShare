@@ -1,23 +1,25 @@
-import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('App', () => {
-  it('відображає заголовок стартової сторінки', () => {
+  it('відображає заголовок особистого кабінету', () => {
     render(<App />);
 
     expect(
-      screen.getByRole('heading', { name: 'Get started', level: 1 }),
+      screen.getByRole('heading', { name: 'Особистий кабінет' }),
     ).toBeInTheDocument();
   });
 
-  it('збільшує лічильник після натискання', () => {
+  it('відображає кнопки керування заявкою', () => {
     render(<App />);
 
-    const button = screen.getByRole('button', { name: 'Count is 0' });
+    expect(
+      screen.getByRole('button', { name: 'Підтвердити' }),
+    ).toBeInTheDocument();
 
-    fireEvent.click(button);
-
-    expect(button).toHaveTextContent('Count is 1');
+    expect(
+      screen.getByRole('button', { name: 'Відхилити' }),
+    ).toBeInTheDocument();
   });
 });
