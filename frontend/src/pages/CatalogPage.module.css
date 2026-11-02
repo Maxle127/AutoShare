@@ -1,0 +1,318 @@
+.catalog {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner {
+  height: 200px;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/mountains.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 24px 48px;
+}
+
+.banner h1 {
+  color: #f5f7fa;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.banner p {
+  color: #8c939b;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.searchForm {
+  height: 112px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  background-color: #1b222c;
+  padding: 20px;
+  margin: -56px 48px 0;
+  border-radius: 12px;
+  border: 1px solid #3b4652;
+  position: relative;
+  z-index: 1;
+}
+
+.searchForm > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.searchForm label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #8c939b;
+}
+
+.searchForm input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #3b4652;
+  background-color: #11161d;
+  color: #f5f7fa;
+  font-size: 16px;
+}
+
+.searchForm button {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffb347;
+  color: #11161d;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.searchForm button:hover {
+  background-color: #ffa726;
+}
+
+.catalogContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin: 24px 48px 48px;
+}
+
+.filterForm {
+  width: 272px;
+  flex-shrink: 0;
+  background-color: #1b222c;
+  border-radius: 12px;
+  border: 1px solid #3b4652;
+  padding: 20px;
+}
+
+.filterForm h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #f5f7fa;
+}
+
+.filterForm h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  color: #f5f7fa;
+}
+
+.filterForm label {
+  color: #b0bac5;
+  font-size: 16px;
+}
+
+.filterForm > div:not(.priceRange) {
+  margin-bottom: 14px;
+}
+
+.filterForm input[type='checkbox'] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+  background-color: #11161d;
+  border: 1px solid #3b4652;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.filterForm input[type='checkbox']:checked {
+  background-color: #ffb347;
+  border-color: #ffb347;
+}
+
+.filterForm input[type='checkbox']:checked::after {
+  content: '✓';
+  display: block;
+  color: #11161d;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+}
+
+.priceRange {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.priceRange > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.priceRange label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.priceRange input[type='number'] {
+  width: 100%;
+  min-width: 0;
+  padding: 14px 10px;
+  border-radius: 8px;
+  border: 1px solid #3b4652;
+  background-color: #11161d;
+  color: #f5f7fa;
+  font-size: 14px;
+}
+
+.carList {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+}
+
+.carCard {
+  min-width: 0;
+  background-color: #1b222c;
+  border: 1px solid #3b4652;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carImage {
+  width: 100%;
+  height: 180px;
+  background-color: #303c49;
+}
+
+.carInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+}
+
+.carInfo h3 {
+  margin: 0 0 8px;
+  color: #f5f7fa;
+  font-size: 22px;
+}
+
+.carInfo p {
+  margin: 0;
+  color: #b0bac5;
+  font-size: 16px;
+}
+
+.carPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 150px;
+}
+
+.carPrice p {
+  color: #f5f7fa;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.carPrice button {
+  padding: 14px 16px;
+  background-color: #ffb347;
+  color: #11161d;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.carPrice button:hover {
+  background-color: #ffa726;
+}
+
+@media (max-width: 1100px) {
+  .catalogContent {
+    gap: 20px;
+  }
+
+  .filterForm {
+    width: 240px;
+  }
+
+  .carList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    min-height: 200px;
+    padding: 24px;
+  }
+
+  .banner h1 {
+    font-size: 30px;
+  }
+
+  .searchForm {
+    height: auto;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: -30px 20px 0;
+    gap: 16px;
+  }
+
+  .searchForm > div {
+    flex: 1 1 100%;
+  }
+
+  .catalogContent {
+    flex-direction: column;
+    margin: 24px 20px;
+  }
+
+  .filterForm {
+    width: 100%;
+  }
+
+  .carList {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner h1 {
+    font-size: 26px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .carInfo {
+    flex-direction: column;
+  }
+
+  .carPrice {
+    min-width: 0;
+  }
+
+  .carPrice p {
+    text-align: left;
+  }
+}

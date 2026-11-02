@@ -1,0 +1,217 @@
+.account {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 48px;
+}
+
+.account h1 {
+  color: #f5f7fa;
+  font-size: 40px;
+  margin: 0 0 4px;
+}
+
+.description {
+  color: #b0bac5;
+  font-size: 18px;
+  margin: 0 0 48px;
+}
+
+/* Вкладки кабінету */
+
+.tabs {
+  display: flex;
+  gap: 64px;
+  border-bottom: 1px solid #3b4652;
+  margin-bottom: 36px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  color: #b0bac5;
+  font-size: 20px;
+  padding: 0 0 18px;
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  color: #ffb347;
+}
+
+.tabs .activeTab {
+  color: #ffb347;
+  border-bottom: 3px solid #ffb347;
+}
+
+/* Вхідні заявки */
+
+.requests h2 {
+  color: #f5f7fa;
+  font-size: 28px;
+  margin: 0 0 4px;
+}
+
+.requestCount {
+  color: #b0bac5;
+  font-size: 16px;
+  margin: 0 0 24px;
+}
+
+/* Картка заявки */
+
+.requestCard {
+  display: flex;
+  gap: 28px;
+  background-color: #1b222c;
+  border: 1px solid #3b4652;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.carImage {
+  width: 320px;
+  height: 230px;
+  flex-shrink: 0;
+  background-color: #303c49;
+  border-radius: 10px;
+}
+
+.requestInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.requestInfo h3 {
+  color: #f5f7fa;
+  font-size: 28px;
+  margin: 0 0 16px;
+}
+
+.requestInfo p {
+  color: #b0bac5;
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+.requestInfo .requestDates {
+  color: #f5f7fa;
+}
+
+.requestInfo .requestPrice {
+  color: #f5f7fa;
+  font-weight: 700;
+}
+
+.requestInfo .requestNote {
+  font-size: 16px;
+  margin-top: 44px;
+  margin-bottom: 0;
+}
+
+/* Статус і кнопки */
+
+.requestActions {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.status {
+  background-color: #382d1f;
+  border: 1px solid #55452f;
+  border-radius: 24px;
+  color: #ffb347;
+  padding: 8px 14px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 260px;
+}
+
+.actionButtons button {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.confirmButton {
+  background-color: #ffb347;
+  color: #11161d;
+  border: none;
+}
+
+.confirmButton:hover {
+  background-color: #ffa726;
+}
+
+.rejectButton {
+  background-color: transparent;
+  color: #f5f7fa;
+  border: 1px solid #3b4652;
+}
+
+.rejectButton:hover {
+  background-color: #303c49;
+}
+
+/* Адаптивність */
+
+@media (max-width: 1200px) {
+  .requestCard {
+    flex-wrap: wrap;
+  }
+
+  .requestActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .account {
+    padding: 24px 20px;
+  }
+
+  .account h1 {
+    font-size: 32px;
+  }
+
+  .tabs {
+    gap: 24px;
+    overflow-x: auto;
+  }
+
+  .tabs button {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .requestCard {
+    flex-direction: column;
+  }
+
+  .carImage {
+    width: 100%;
+    height: 220px;
+  }
+
+  .requestActions {
+    flex-direction: column;
+  }
+
+  .actionButtons {
+    width: 100%;
+  }
+
+  .requestInfo .requestNote {
+    margin-top: 24px;
+  }
+}

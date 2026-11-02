@@ -1,0 +1,217 @@
+.carDetails {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px 48px;
+}
+
+.breadcrumbs {
+  color: #b0bac5;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.carDetails h1 {
+  color: #f5f7fa;
+  font-size: 40px;
+  margin: 0;
+}
+
+.city {
+  color: #b0bac5;
+  font-size: 18px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.detailsContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(360px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.carInformation {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+
+.carImage {
+  width: 100%;
+  height: 407px;
+  background-color: #303c49;
+  border-radius: 12px;
+}
+
+.infoBlock {
+  background-color: #1b222c;
+  border: 1px solid #3b4652;
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.infoBlock h2 {
+  font-size: 22px;
+  color: #f5f7fa;
+  margin: 0 0 8px;
+}
+
+.infoBlock p {
+  font-size: 16px;
+  color: #b0bac5;
+  margin: 0;
+}
+
+.characteristics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  color: #b0bac5;
+  font-size: 18px;
+}
+
+/* Панель бронювання */
+
+.bookingPanel {
+  background-color: #1b222c;
+  border: 1px solid #3b4652;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.bookingPanel h2 {
+  color: #f5f7fa;
+  font-size: 34px;
+  margin: 0 0 28px;
+}
+
+.bookingDates {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.bookingDates > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.bookingDates label {
+  display: block;
+  color: #b0bac5;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.bookingDates input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #3b4652;
+  border-radius: 8px;
+  background-color: #11161d;
+  color: #f5f7fa;
+  font-size: 16px;
+}
+
+.priceCalculation {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #b0bac5;
+  font-size: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #3b4652;
+}
+
+.priceCalculation span:last-child {
+  color: #f5f7fa;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin: 28px 0;
+  color: #f5f7fa;
+  font-size: 24px;
+}
+
+.totalPrice strong:last-child {
+  font-size: 28px;
+}
+
+.bookingButton {
+  width: 100%;
+  background-color: #ffb347;
+  color: #11161d;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.bookingButton:hover {
+  background-color: #ffa726;
+}
+
+.bookingNote {
+  color: #b0bac5;
+  font-size: 16px;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+/* Адаптивність */
+
+@media (max-width: 1000px) {
+  .detailsContent {
+    grid-template-columns: 1fr;
+  }
+
+  .carImage {
+    height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carDetails {
+    padding: 24px 20px;
+  }
+
+  .carDetails h1 {
+    font-size: 32px;
+  }
+
+  .carImage {
+    height: 230px;
+  }
+
+  .characteristics {
+    gap: 12px;
+    font-size: 16px;
+  }
+
+  .bookingPanel {
+    padding: 20px;
+  }
+
+  .bookingPanel h2 {
+    font-size: 28px;
+  }
+
+  .bookingDates {
+    flex-direction: column;
+  }
+
+  .totalPrice {
+    font-size: 20px;
+  }
+
+  .totalPrice strong:last-child {
+    font-size: 24px;
+  }
+}
