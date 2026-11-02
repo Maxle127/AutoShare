@@ -1,16 +1,18 @@
+import { Link } from 'react-router';
 import styles from './Header.module.css';
 
 function Header() {
   return (
     <header className={styles.header}>
-      <a className={styles.logo} href="/">
+      <Link to="/" className={styles.logo}>
         Auto<span>Share</span>
-      </a>
+      </Link>
 
       <nav className={styles.navigation}>
-        <a href="/">Каталог</a>
-        <a href="/account">Додати авто</a>
-        <a href="/account">Кабінет</a>
+        <Link to="/">Каталог</Link>
+        <Link to="/cars/1">Авто</Link>
+        <Link to="/account">Кабінет</Link>
+        <Link to="/login">Вхід</Link>
       </nav>
     </header>
   );
